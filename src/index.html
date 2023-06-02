@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Sample Application - Search Field Widget </title>
+<link rel="stylesheet" href="search-field-widget.css"></link>
+</head>
+<body>
+	<div class="sample-widget-container">
+		<div class="sample-widget-container-heading">
+			<h1>Can't find what you are looking for?</h1>
+		</div>
+		<div id="eg-search-field-widget-id"
+		 data-egain-role="search-field-widget"
+		 data-egain-search-param="your_search_param"
+		 data-egain-portal-id="your_kb_portal_id"
+		 data-egain-locale="your_locale"
+		 data-egain-template-name="your_template_name"
+		 data-egain-b2c-host="your_egain_b2c_host"
+		 data-egain-domain-hint="your_egain_domain_hint"
+		 >
+		</div>
+	</div>
+<script type="text/javascript" src="./egain-ui-2.0.0.min.js"></script>
+<script>
+	// Changin header text with help of callback
+	eGainUI('#eg-search-field-widget-id').on("eGainUI.callback", function () {
+		eGainUI('#eg-search-field-widget-id h1').html("Search Results for " + eGainUI('#eg-search-field-widget-id .eGain-Search-Field-Input-text')[0].value);
+		eGainUI('#eg-search-field-widget-id .eGain-Search-Field-Input-text')[0].placeholder = "Search knowledge base";
+		eGainUI('#eg-search-field-widget-id .eGain-Search-Field-Input-button')[0].value = ">";
+	});
+	
+</script>
+</body>
+</html>
