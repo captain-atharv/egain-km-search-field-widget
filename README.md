@@ -38,7 +38,7 @@ Recommendation:
 Script tag to be added to load the eGain JavaScript library is -
 
 ```JavaScript
-<script type="text/javascript" src="./egain-ui-2.0.0.min.js"></script>
+<script type="text/javascript" src="./egain-ui-search-field-widget.min.js"></script>
 ```
 
 
